@@ -1,0 +1,22 @@
+Andres M -> Clase sniffer - capturas desde un archivo
+
+Emanuel -> Interfaz grafica en qt (GUI), definir filtros, ver captura general 
+	de los	paquetes, ver captura detallada de un paquete, escoger 
+	interfaz de red, guardar captura, abrir una captura anterior
+
+Eder,Sergio? -> Obtener detalles de los pqts(campos protocolos ethernet, IP, 
+	     tcp)
+
+Sebastian -> Clase program(API), interfaz entre sniffer y gui. Pqt desde buffer
+	  guardar pqt, recibir filtros, escribir resultados de filtros, 
+	  instanciar, inicializar el sniffer.
+
+Ricardo -> Clase program(API), interfaz entre sniffer y gui. Pqt desde buffer
+	  guardar pqt, recibir filtros, escribir resultados de filtros, 
+	  instanciar, inicializar el sniffer.
+
+Edward -> Interfaz grafica en qt (GUI), definir filtros, ver captura general 
+	de los	paquetes, ver captura detallada de un paquete, escoger 
+	interfaz de red, guardar captura, abrir una captura anterior
+
+Julian -> Ensamblar codigo html en los paquetes. y archivos sobre http
