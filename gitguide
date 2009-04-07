@@ -1,0 +1,21 @@
+[Todo esto en repositorio local]
+
+Clonar un repositorio(e.j. el de github)
+$git clone git://github.com/brolin/sniffer-udea.git 
+
+Iniciar un proyecto con git, ubicados dentro de la carpeta de proyecto
+$git init
+
+Mirar el estado del proyecto: muestra los ultimas adiciones cometidas al repositorio
+$git status
+
+Adicional archivos al proyecto
+$git add nombre_archivo
+$git add . (Asi adicional todos los archivos que han sido modificados o agregados)
+
+Commit al repositorio: Esto despues de modificar algo lo agregamos al repositorio y con commit "formalizamos" la adicion
+$git commit (Asi sale una interfaz tipo vim, donde se agrega el comentario)
+$git commit -m "mensaje para indicar las modificaciones"
+
+Crear un branch(rama de desarrollo)
+$git branch nombre_branch

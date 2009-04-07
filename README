@@ -1,3 +1,11 @@
+ ____        _  __  __                          _            
+/ ___| _ __ (_)/ _|/ _| ___ _ __      _   _  __| | ___  __ _ 
+\___ \| '_ \| | |_| |_ / _ \ '__|____| | | |/ _` |/ _ \/ _` |
+ ___) | | | | |  _|  _|  __/ | |_____| |_| | (_| |  __/ (_| |
+|____/|_| |_|_|_| |_|  \___|_|        \__,_|\__,_|\___|\__,_|
+                                                             
+
+
 Andres M -> Clase sniffer - capturas desde un archivo
 
 Emanuel -> Interfaz grafica en qt (GUI), definir filtros, ver captura general 
