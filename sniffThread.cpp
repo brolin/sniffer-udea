@@ -1,7 +1,7 @@
 #include "sniffThread.h"
 
 void sniffThread::run(){
-    sniff->start();
+    qDebug(sniff->start());
 
 }
 

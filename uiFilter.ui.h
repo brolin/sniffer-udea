@@ -14,22 +14,25 @@
 #include "sniffer.h"
 
 // sniffThread * sniff1;
-Sniffer * sniff1;
-sniffThread * sniffThr;
+Sniffer * sniff1=NULL;
+sniffThread * sniffThr=NULL;
+int numDevs=0;
 
 void Filter::init(){
-    try{
+    /*try{
     sniff1=new Sniffer(); //falta catch
-}catch (const char *){
-  
 }
-catch (char *){
+catch (const char * X){
   qDebug("NO se inció bien");    
-}
-
+  qDebug(X);
+}*/
+ numDevs=Sniffer::listDevs(); 
+for (int i=0; i<numDevs; i++)
+  cbDevs->insertItem( QString( &Sniffer::devNames[i][0] )   );
+    
     sniffThr=new sniffThread(); //falta catch
+    qDebug("Pasó por Init() ");
 
-qDebug("Pasó por Init() ");
 }
 
 void Filter::destroy(){
@@ -82,6 +85,7 @@ void Filter::filterStart()
    // sniff1->start();
     sniffThr->setSniffer(sniff1); //Define el objeto sniffer dentro del nuevo thread
     sniffThr->start();//Comienza el nuevo thread q a su vez comienza la captura
+    
     qDebug("Volvió de Start()");
 }
 
@@ -94,14 +98,32 @@ void Filter::filterStop()
 
 void Filter::setDevice()
 {
-    try{   sniff1->setInterface( ( leDevice->text() ).latin1() ) ;
-    }catch (char * error)
-    {	qDebug(error);
+    
+    
+    
+    
+    
+    
+    
+    try{   sniff1= new Sniffer( ( leDevice->text() ).latin1() ) ;
+    }catch (char * error) {	
+	qDebug("Error char *");
+	qDebug(error);
 	leDevice->clear();
 	return;
-   }
+    }catch (const char * error2){
+	qDebug("Error const char *");
+	qDebug(error2);
+	leDevice->clear();
+	
+	return;
+	
+    }
+       
+      
     tlDevOK->setText("Dev OK");
     pbConnect->setEnabled(false);
     leDevice->setEnabled(false);
-    
+    leFilter->setEnabled(true);
+    sniff1->dataToFile("-");
 }

@@ -9,6 +9,8 @@ int main( int argc, char ** argv )
     
         //Sniffer * sniff1=new Sniffer("eth1"); //falta catch
     
+    
+    
     w.show();
     a.connect( &a, SIGNAL( lastWindowClosed() ), &a, SLOT( quit() ) );
     return a.exec();
