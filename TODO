@@ -1,4 +1,0 @@
-
-1. Poder empezar una captura(por medio de libpcap)
-2. Filtrar paquetes tcp con protocolo=http
-3. Ensamblar paquetes de una sesion http(pkts entre SYN y FIN o RST)

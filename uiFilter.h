@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Form interface generated from reading ui file 'uiFilter.ui'
 **
-** Created: Tue Mar 31 10:41:38 2009
+** Created: Sat Apr 11 10:04:04 2009
 **      by: The User Interface Compiler ($Id: qt/main.cpp   3.3.8   edited Jan 11 14:47 $)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -20,6 +20,7 @@ class QSpacerItem;
 class QPushButton;
 class QLineEdit;
 class QLabel;
+class QComboBox;
 
 class Filter : public QDialog
 {
@@ -37,6 +38,7 @@ public:
     QLineEdit* leDevice;
     QPushButton* pbConnect;
     QLabel* tlDevOK;
+    QComboBox* cbDevs;
 
 public slots:
     virtual void tryFilter2( const QString & inFilter );

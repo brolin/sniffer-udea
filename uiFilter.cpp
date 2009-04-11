@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Form implementation generated from reading ui file 'uiFilter.ui'
 **
-** Created: Tue Mar 31 10:41:44 2009
+** Created: Sat Apr 11 10:04:07 2009
 **      by: The User Interface Compiler ($Id: qt/main.cpp   3.3.8   edited Jan 11 14:47 $)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -13,6 +13,7 @@
 #include <qpushbutton.h>
 #include <qlineedit.h>
 #include <qlabel.h>
+#include <qcombobox.h>
 #include <qlayout.h>
 #include <qtooltip.h>
 #include <qwhatsthis.h>
@@ -37,6 +38,7 @@ Filter::Filter( QWidget* parent, const char* name, bool modal, WFlags fl )
     bttnStop->setGeometry( QRect( 300, 180, 151, 51 ) );
 
     leFilter = new QLineEdit( this, "leFilter" );
+    leFilter->setEnabled( FALSE );
     leFilter->setGeometry( QRect( 70, 30, 241, 31 ) );
 
     bttnStart = new QPushButton( this, "bttnStart" );
@@ -58,8 +60,11 @@ Filter::Filter( QWidget* parent, const char* name, bool modal, WFlags fl )
     tlDevOK = new QLabel( this, "tlDevOK" );
     tlDevOK->setEnabled( TRUE );
     tlDevOK->setGeometry( QRect( 220, 100, 66, 21 ) );
+
+    cbDevs = new QComboBox( FALSE, this, "cbDevs" );
+    cbDevs->setGeometry( QRect( 430, 60, 120, 16 ) );
     languageChange();
-    resize( QSize(489, 266).expandedTo(minimumSizeHint()) );
+    resize( QSize(756, 262).expandedTo(minimumSizeHint()) );
     clearWState( WState_Polished );
 
     // signals and slots connections
